@@ -1,78 +1,37 @@
-// variable
-var name1 ="Hai Dhanaraj";
-var mes1= "welcome" +name1+"college";
-let name2 ="Ramkumar";
-let mes2 ="Kongunadu "+" "+name2+" student";
-const name3 = "raj";
-console.log(name3);
-//alert(mes1);
-console.log(mes1);
+console.log("Js Connected Successfully");
+console.log(document);
+console.log(document.title);
 
+let heading = document.getElementById("title");
+console.log(heading);
+heading.innerText = "DOM is Working";
+heading.style.color = "blue";
+heading.style.backgroundColor = "Lightgray";
 
+let para = document.getElementById("para");
+console.log("InnerText :", para.innerText);
+console.log("TextContent :", para.textContent);
+para.innerText = "Change inner text";
+para.textContent = "Change Text conetent";
 
-// Datatypes
-let Name = "Raj";
-let age = 33;
-let isCorrect = true;
-let Normal;
-let troble = null;
-console.log(typeof Name);
-console.log(typeof age);
-console.log(typeof isCorrect);
-console.log(typeof Normal);
-console.log(Normal);
-console.log(typeof troble);
+let box = document.getElementById("box");
+console.log("innerHTML :", box.innerHTML);
+console.log("innerText :", box.innerText);
+box.innerHTML = "<h2>Inject Heading</h2><p> Content para</p>";
 
+let img = document.getElementById("myimg");
+console.log("Image in :", img.getAttribute("src"));
+img.setAttribute(
+  "src",
+  "https://cdn.britannica.com/16/254816-050-41C9577A/Google-logo-Googleplex-headquarters-Mountain-View-California.jpg?w=385"
+);
+img.removeAttribute("alt");
+console.log("Alt removed in the process");
 
-// Object
-let person = {
-    Name : "Thalapathy",
-    age : 22,
-    isCorrect : true,
-    lists : {
-        balls: "football",
-        Bats:"Cricket"
-    }
-}
-console.log(person.lists.Bats);
-
-
-// Arrays
-let post = ["Red","Blue","Black"];
-post[3]=null
-post[2]="yellow";
-console.log(post);
-
-
-//Functions
-function userData() {
-    let User = "Ram";
-    let College ="Kongunadu "+User+" student";
-    console.log(College);
-}
-userData();
-// function addition
-function add(number1,number2){
-    let value = number1+number2;
-    console.log(value);
-}
-add(200,300)
-// function Subtraction
-function sub(number1,number2){
-    let value = number1-number2;
-    console.log(value);
-}
-sub(200,300)
-// function Multiple
-function mul(number1,number2){
-    let value = number1*number2;
-    console.log(value);
-}
-mul(200,300)
-// function divition
-function div(number1,number2){
-    let value = number1/number2;
-    console.log(value);
-}
-div(200,300)
-
+let styId = document.getElementById("styleId");
+styId.style.color="yellow";
+styId.style.backgroundColor="green";
+styId.style.padding="20px";
+styId.style.fontSize="70px";
+styId.style.display="none";
+styId.style.display="block";
