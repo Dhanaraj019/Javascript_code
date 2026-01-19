@@ -31,7 +31,95 @@ console.log("Alt removed in the process");
 let styId = document.getElementById("styleId");
 styId.style.color="yellow";
 styId.style.backgroundColor="green";
-styId.style.padding="20px";
-styId.style.fontSize="70px";
+styId.style.padding="10px";
+styId.style.fontSize="10px";
 styId.style.display="none";
 styId.style.display="block";
+
+let par = document.getElementById("classPara");
+par.classList.add("highlight");
+par.classList.remove("highlight");
+par.classList.toggle("highlight");
+
+let btn1 = document.getElementById("btn1");
+let meg1 = document.getElementById("meg1");
+btn1.addEventListener("click",function () {
+  meg1.innerText="Para to Click here";
+  meg1.style.color="red";
+});
+
+let btn2 = document.getElementById("btn2");
+let meg2 = document.getElementById("meg2");
+let nameInput = document.getElementById("nameInput");
+btn2.addEventListener("click", function () {
+  meg2.innerText=nameInput.value;
+  nameInput.value="";
+});
+
+let btn3 = document.getElementById("btn3");
+let container = document.getElementById("container");
+btn3.addEventListener("click",function () {
+  let p = document.createElement("p");
+p.innerText="This paragraph is created by the JavaScript";
+container.appendChild(p);
+});
+
+let ul = document.createElement("ul");
+container.appendChild(ul);
+btn3.addEventListener("click",function () {
+  let li = document.createElement("li");
+  li.innerText= "List items";
+  ul.appendChild(li);
+});
+
+let delbtn = document.getElementById("delbtn");
+let par1 = document.getElementById("deleteme");
+delbtn.addEventListener("click",function () {
+  par1.remove();
+})
+
+let removebtn =document.getElementById("removebtn");
+let list = document.getElementById("myList");
+let item = document.getElementById("removeIt");
+removebtn.addEventListener("click",function () {
+  list.removeChild(item);
+})
+
+let buttons = document.querySelectorAll(".btn");
+let eventOutput = document.getElementById("eventOutput");
+buttons.forEach(function(btn) {
+  btn.addEventListener("click",function (event) {
+    eventOutput.innerText="You Clicked!!"+ event.target.innerText+"Event:"+event.type;
+  });
+});
+
+let tasklist = document.getElementById("taskList");
+let taskOutput = document.getElementById("taskOutput");
+tasklist.addEventListener("click", function (event) {
+  if(event.target.tagName === "LI"){
+    taskOutput.innerText="You clicked"+event.target.innerText;
+    event.target.style.backgroundColor="yellow";
+  }
+});
+
+let Isinput = document.getElementById("Isinput");
+let savebtn = document.getElementById("savebtn");
+savebtn.addEventListener("click",function () {
+  localStorage.setItem("myData",Isinput.value);
+  alert("Data Saved");
+});
+
+let loadmsg = document.getElementById("Loadbtn");
+let Isoutput = document.getElementById("Isoutput");
+loadmsg.addEventListener("click",function (event) {
+  let savedbtn = localStorage.getItem("myData");
+  Isoutput.innerText=savedbtn;
+});
+
+let deletebtn = document.createElement("button");
+deletebtn.innerText="Delete Data";
+document.body.appendChild(deletebtn);
+deletebtn.addEventListener("click",function () {
+  localStorage.removeItem("myData");
+  alert("Data Deleted");
+});

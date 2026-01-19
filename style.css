@@ -1,0 +1,10 @@
+*{
+    background-color: aqua;
+    padding: auto;
+}
+.highlight{
+    background-color: bisque;
+    color: rgb(0, 81, 255);
+    padding: 10px;
+    font-size: 20px;
+}
