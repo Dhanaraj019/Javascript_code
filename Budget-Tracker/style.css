@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Input section */
+input, select, button {
+  padding: 8px;
+  margin: 5px 0;
+  width: 100%;
+  font-size: 14px;
+}
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+/* Summary box */
+.summary {
+  margin-top: 15px;
+  padding: 10px;
+  background: #f0f3f7;
+  border-radius: 5px;
+}
+
+.summary p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+/* Transaction list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  background: #fafafa;
+  padding: 8px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border-left: 5px solid gray;
+}
+
+li span {
+  margin-right: 10px;
+}
+
+/* Income & Expense colors */
+li.income {
+  border-left-color: green;
+}
+
+li.expense {
+  border-left-color: red;
+}
+
+/* Delete button */
+.del-btn {
+  margin-left: auto;
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.del-btn:hover {
+  background: darkred;
+}
